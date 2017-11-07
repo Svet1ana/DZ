@@ -12,7 +12,7 @@ public class Reader {
 
     public void Scan () {
 
-        System.out.println("Введите первое чсисло");
+        System.out.println("Введите первое число");
 
         Scanner scn = new Scanner(System.in);
         firstnum = scn.nextDouble();
@@ -20,11 +20,11 @@ public class Reader {
         //{
         //    System.out.println("Введите число!");
                 //};
-        System.out.println("Введите опертор: + или -, * или /, %");
+        System.out.println("Введите оператор: + или -, * или /, %");
 
         operation = scn.next().charAt(0);
 
-        System.out.println("Введите второе чсисло");
+        System.out.println("Введите второе число");
         secondnum = scn.nextDouble();
         switch (operation) {
             case '+':
@@ -43,6 +43,7 @@ public class Reader {
                     } catch (ArithmeticException e) {
                         System.out.println("Произошла недопустимая арифметическая операция - деление на 0");
                     }
+                    break;
 
                 }
                 System.out.println("\n Деление чисел " + firstnum + " и " + secondnum +  " равно "+ (firstnum * secondnum));
