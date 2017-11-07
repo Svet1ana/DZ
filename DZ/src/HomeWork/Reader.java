@@ -19,8 +19,7 @@ public class Reader {
         //if (firstnum instanceof!=float)
         //{
         //    System.out.println("Введите число!");
-        //    Scanner scn = new Scanner(System.in);
-        //};
+                //};
         System.out.println("Введите опертор: + или -, * или /, %");
 
         operation = scn.next().charAt(0);
@@ -36,6 +35,17 @@ public class Reader {
                 break;
             case '*':
                 System.out.println("\n Произведение чисел " + firstnum + " и " + secondnum +  " равно "+ (firstnum * secondnum));
+                break;
+            case '/':
+                if (secondnum == 0) {
+                    try {
+                        System.out.println(firstnum/0);
+                    } catch (ArithmeticException e) {
+                        System.out.println("Произошла недопустимая арифметическая операция - деление на 0");
+                    }
+
+                }
+                System.out.println("\n Деление чисел " + firstnum + " и " + secondnum +  " равно "+ (firstnum * secondnum));
                 break;
             case '%':
                 System.out.println("\n Остаток от деления " + firstnum + " и " + secondnum +  " равен "+ (firstnum % secondnum));
